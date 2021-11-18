@@ -85,12 +85,18 @@ li a:hover {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
+    margin-bottom: 10%;
+}
+#stage img {
+    height: 500px;
 }
 
 .prev, .next {
+    position: absolute;
     cursor: pointer;
     padding: 16px;
-    color: gray;
+    background-color: rgba(0,0,0,0.4);
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.2s ease;
@@ -99,8 +105,10 @@ li a:hover {
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    margin-left: 55%;
+}
+.prev {
+    margin-right: 55%;
 }
   
 .prev:hover, .next:hover {
