@@ -1,12 +1,17 @@
 body { margin: 0; }
 
+#picture-container {
+    background: rgba(0,0,0,0.2) url(../images/chapterPhoto1.jpg) no-repeat center left;
+    background-size: cover;
+    padding-bottom: 14%;
+}
 
 #tke {
     font-size: 40pt;
     text-align: center;
 }
 #tke a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -26,7 +31,7 @@ li {
 }
 
 li a {
-    color: black;
+    color: white;
     text-decoration: none;
     display: block;
     text-align: center;
@@ -46,6 +51,7 @@ li a:hover {
 
 .hero {
     text-align: center;
+    color: white;
 }
 
 #about {
