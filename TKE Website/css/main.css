@@ -6,7 +6,6 @@ body { margin: 0; }
     text-align: center;
 }
 #tke a {
-    color: black;
     text-decoration: none;
 }
 
@@ -42,12 +41,4 @@ li a:hover {
 #contact {
     float: right;
     font-size: 20pt;
-}
-
-.hero {
-    text-align: center;
-}
-
-#about {
-    min-width: none;
 }
