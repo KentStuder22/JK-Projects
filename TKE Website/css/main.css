@@ -20,6 +20,10 @@ body {
     font-size: 40pt;
     text-align: center;
 }
+#tke img{
+    width: 8%;
+    float:left;
+}
 #tke a {
     color: white;
     text-decoration: none;
