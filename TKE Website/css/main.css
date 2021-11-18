@@ -81,7 +81,7 @@ li a:hover {
 #photoWrapper {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -90,7 +90,7 @@ li a:hover {
 .prev, .next {
     cursor: pointer;
     padding: 16px;
-    color: gray;
+    color: rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 18px;
     transition: 0.2s ease;
