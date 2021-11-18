@@ -1,4 +1,13 @@
-body { margin: 0; }
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/railway/Raleway-VariableFont_wght.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: raleway, arial;
+}
+
 
 #picture-container {
     background: rgba(0,0,0,0) url(../images/chapterPhoto1.jpg) no-repeat center left;
@@ -53,6 +62,10 @@ li a:hover {
 .hero {
     text-align: center;
     color: white;
+}
+
+.hero li a {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #about {
