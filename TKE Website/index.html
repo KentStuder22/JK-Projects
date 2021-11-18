@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tau Kappa Epsilon - BΘ</title>
         <link rel="stylesheet" href="css/main.css">
+        <script src="index.js"></script>
     </head>
     <body>
         <div id="picture-container">
@@ -42,8 +43,13 @@
                 <p><i><center>"I am proud to be a Teke. For me, TKE has not only been an enjoyable association,​ but also a meaningful aspect of my life."</center>
                 <center>-Ronald Reagan</center></i></p>
             </div>
-        </div>
-        <div class="home-photos">
+        </section>
+        <div id="photoWrapper">
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <div id="stage">
+                <img id="display" src="./slideshow/2019Decks.PNG" alt="image">
+            </div>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
         </div>
     </body>
 </html>
