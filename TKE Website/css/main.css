@@ -80,23 +80,25 @@ li a:hover {
 
 #photoWrapper {
     display: inline-flex;
+    padding-left: 2%;;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
-    margin-bottom: 10%;
+    width: 50%;
 }
-#stage img {
-    height: 500px;
+.middle-wrapper {
+    display:flex;
+}
+.photo-text {
+    text-align: center;
+    width: 50%;
 }
 
 .prev, .next {
-    position: absolute;
     cursor: pointer;
     padding: 16px;
-    background-color: rgba(0,0,0,0.4);
-    color: black;
+    color:rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 18px;
     transition: 0.2s ease;
@@ -105,10 +107,8 @@ li a:hover {
 }
 
 .next {
-    margin-left: 55%;
-}
-.prev {
-    margin-right: 55%;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
   
 .prev:hover, .next:hover {
