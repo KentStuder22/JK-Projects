@@ -1,6 +1,7 @@
 
 var slides = [
     "./slideshow/2019Decks.PNG",
+    "./slideshow/execSki.PNG",
     "./slideshow/fenceChill.PNG",
     "./slideshow/frontHouse.PNG",
     "./slideshow/hoco2017Skit.PNG"
