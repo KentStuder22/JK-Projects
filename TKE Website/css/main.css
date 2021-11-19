@@ -17,10 +17,11 @@ body {
 }
 
 #tke {
-    font-size: 40pt;
+    font-size: 50pt;
     text-align: center;
+    padding: 25px 7% 25px 0px;
 }
-#tke img{
+#crest{
     width: 8%;
     float:left;
 }
