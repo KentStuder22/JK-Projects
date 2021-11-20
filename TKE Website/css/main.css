@@ -10,7 +10,7 @@ body {
 
 
 #picture-container {
-    background: rgba(0,0,0,0) url(../images/chapterPhoto1.jpg) no-repeat center left;
+    background: rgba(0,0,0,0) url(../images/TKEHouse.jpg) no-repeat center left;
     background-size: cover;
     padding-bottom: 10%;
     box-shadow: inset 0 0 0 2000000px rgba(0,0,0,0.5);
@@ -19,7 +19,7 @@ body {
     width:10%;
 }
 #tke {
-    font-size: 45pt;
+    font-size: 55pt;
     text-align: center;
     padding: 25px 7% 25px 0px;
 }
@@ -54,7 +54,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     font-weight: 600;
-    font-size: 16pt;
+    font-size: 25pt;
 }
 
 li a:hover {
