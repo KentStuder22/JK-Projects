@@ -1,11 +1,11 @@
 @font-face {
-    font-family: raleway;
-    src: url(../fonts/railway/Raleway-VariableFont_wght.ttf);
+    font-family: dosis;
+    src: url(../fonts/Dosis/Dosis-VariableFont_wght.ttf);
 }
 
 body {
     margin: 0;
-    font-family: raleway, arial;
+    font-family: Dosis, arial;
 }
 
 
@@ -82,6 +82,7 @@ li a:hover {
 }
 
 #photoWrapper {
+    background: transparent;
     display: inline-flex;
     padding-left: 2%;;
     align-items: center;
@@ -89,6 +90,10 @@ li a:hover {
     margin-right: auto;
     margin-left: auto;
     width: 50%;
+}
+#display {
+    width: 100%;
+    height: 100%
 }
 .middle-wrapper {
     display:flex;
@@ -101,6 +106,7 @@ li a:hover {
 .prev, .next {
     cursor: pointer;
     padding: 16px;
+    
     color:rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 18px;
