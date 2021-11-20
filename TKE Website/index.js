@@ -2,7 +2,7 @@
 var slides = [
     "./slideshow/2019Decks.PNG",
     "./slideshow/AEClass.JPG",
-    "./slideshow/baseketballAction.JPG",
+    "./slideshow/basketballAction.JPG",
     "./slideshow/basketballJBS.JPG",
     "./slideshow/DaggerMuck.JPG",
     "./slideshow/execSki.PNG",

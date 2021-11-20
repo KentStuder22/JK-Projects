@@ -106,7 +106,7 @@ li a:hover {
 .prev, .next {
     cursor: pointer;
     padding: 16px;
-    
+    border: none;
     color:rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 18px;
