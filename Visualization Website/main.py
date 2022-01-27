@@ -26,12 +26,15 @@ class MainHandler(tornado.web.RequestHandler):
 
         self.render("index.html", tweets=tornado.escape.json_encode(tweets), limit=limit)    
 
+class TrendHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write("Hello Worlds")
 
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/", MainHandler),
-            # (r"/", DataHandler),
+            (r"/trends", TrendHandler),
         ]
 
         settings = {
