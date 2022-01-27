@@ -1,15 +1,16 @@
+from asyncio.windows_events import NULL
+from genericpath import exists
 import tornado
 import tornado.ioloop
 import tornado.web
 import pymongo
-import datetime
 import os.path
 import json
 import bson
 import pprint
 
-#client = pymongo.MongoClient("mongodb://james:IYT7i6rfTR&%25R*&@119.45.163.114:27017/TweetScraper")
-client = pymongo.MongoClient("mongodb://kent:viygF&$^&VFJF@119.45.163.114:27017/TweetScraper")
+client = pymongo.MongoClient("mongodb://james:IYT7i6rfTR&%25R*&@119.45.163.114:27017/TweetScraper")
+#client = pymongo.MongoClient("mongodb://kent:viygF&$^&VFJF@119.45.163.114:27017/TweetScraper")
 db = client['TweetScraper']
 collection = db['tweetday']
 
@@ -19,7 +20,7 @@ class MainHandler(tornado.web.RequestHandler):
         tweets = []
         stop_at = 40000
         
-        for tweet in collection.find( { "is_labeled" : "1"}, {"label_result" : "true"}):
+        for tweet in collection.find( { "is_labeled" : "1"}, {"label_result" : "true"}, {"geo" : {'$ne' : None, '$exists' : True}}):
             tweets.append(json.dumps(tweet['geo']))
             
             if len(tweets) == stop_at: break
