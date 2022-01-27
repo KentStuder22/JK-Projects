@@ -21,6 +21,8 @@ class MainHandler(tornado.web.RequestHandler):
         stop_at = 20
 
         for tweet in collection.find():
+            if not tweet['is_labeled']: # only get labeled data
+                continue
             tweets.append(json.dumps(tweet))
             if len(tweets) == stop_at: break
 
