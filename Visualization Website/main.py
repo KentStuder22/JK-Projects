@@ -17,14 +17,14 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         
         tweets = []
-        limit = 20   #per page
-        stop_at = 20
+        stop_at = 40_000
 
         for tweet in collection.find():
-            tweets.append(json.dumps(tweet))
-            if len(tweets) == stop_at: break
+            if tweet['is_labeled'] and ['label_result']: # only get labeled data
+                tweets.append(json.dumps(tweet))
+                if len(tweets) == stop_at: break
 
-        self.render("index.html", tweets=tornado.escape.json_encode(tweets), limit=limit)    
+        self.render("index.html", tweets=tornado.escape.json_encode(tweets))    
 
 class TrendHandler(tornado.web.RequestHandler):
     def get(self):
