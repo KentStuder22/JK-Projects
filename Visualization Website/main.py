@@ -17,7 +17,7 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         
         tweets = []
-        stop_at = 20000
+        stop_at = 40_000
 
         for tweet in collection.find():
             if not tweet['is_labeled']: # only get labeled data
