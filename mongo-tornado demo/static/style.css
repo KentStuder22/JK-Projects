@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;  
 }
-
+.header {
+    color: whitesmoke;
+}
 body {
-    background-color: rgb(158, 215, 223);
-    font-family:'Times New Roman';
+    background-color: #5D5C61;
+    font-family:'Mulish', sans-serif;
     font-size: large;
     font-weight:200
 }
