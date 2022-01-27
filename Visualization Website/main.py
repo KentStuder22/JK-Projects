@@ -17,8 +17,7 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         
         tweets = []
-        limit = 20   #per page
-        stop_at = 20
+        stop_at = 20000
 
         for tweet in collection.find():
             if not tweet['is_labeled']: # only get labeled data
@@ -26,7 +25,7 @@ class MainHandler(tornado.web.RequestHandler):
             tweets.append(json.dumps(tweet))
             if len(tweets) == stop_at: break
 
-        self.render("index.html", tweets=tornado.escape.json_encode(tweets), limit=limit)    
+        self.render("index.html", tweets=tornado.escape.json_encode(tweets))    
 
 
 class Application(tornado.web.Application):
