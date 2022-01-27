@@ -24,7 +24,7 @@ class MainHandler(tornado.web.RequestHandler):
             tweets.append(json.dumps(tweet))
             if len(tweets) == stop_at: break
 
-        self.render("index.html", tweets=tornado.escape.json_encode(tweets), limit=limit)    
+        self.render("temp.html", tweets=tornado.escape.json_encode(tweets), limit=limit)    
 
 
 class Application(tornado.web.Application):
