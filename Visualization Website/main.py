@@ -19,9 +19,13 @@ class MainHandler(tornado.web.RequestHandler):
         stop_at = 1000
 
         for tweet in collection.find( { "is_labeled" : "1"}, {"label_result" : "true"}):
+<<<<<<< HEAD
             tweets.append(json.dumps(tweet))
+=======
+            tweets.append(json.dumps(tweet['geo']))
+            
+>>>>>>> 7a341383e617e5572f3af21bd3262e3d07a345a1
             if len(tweets) == stop_at: break
-
         self.render("templates/index.html", tweets=tornado.escape.json_encode(tweets))    
 
 class TrendHandler(tornado.web.RequestHandler):
