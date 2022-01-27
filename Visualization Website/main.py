@@ -17,7 +17,7 @@ class MainHandler(tornado.web.RequestHandler):
         
         tweets = []
         stop_at = 1000
-
+        #comment
         for tweet in collection.find( { "is_labeled" : "1"}, {"label_result" : "true"}):
             tweets.append(json.dumps(tweet['geo']))
             
