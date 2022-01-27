@@ -2,16 +2,28 @@
     margin: 0;
     padding: 0;  
 }
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
 .header {
     color: whitesmoke;
+    padding-left: 70px;
+    text-align: left;
 }
 body {
-    background-color: #5D5C61;
+    background-color: #5d5c61a1;
     font-family:'Mulish', sans-serif;
     font-size: large;
     font-weight:200
 }
-.container {
+.main-container {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -26,7 +38,7 @@ svg path {
     content: attr(data-pop);
 }
 svg path:hover {
-    fill: #0707ff;
+    fill: #1212137e;
     transition: 0.6s;
     cursor: pointer;
 }
