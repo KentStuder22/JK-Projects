@@ -8,7 +8,8 @@ import json
 import bson
 import pprint
 
-client = pymongo.MongoClient("mongodb://james:IYT7i6rfTR&%25R*&@119.45.163.114:27017/TweetScraper")
+#client = pymongo.MongoClient("mongodb://james:IYT7i6rfTR&%25R*&@119.45.163.114:27017/TweetScraper")
+client = pymongo.MongoClient("mongodb://kent:viygF&$^&VFJF@119.45.163.114:27017/TweetScraper")
 db = client['TweetScraper']
 collection = db['tweetday']
 
@@ -16,8 +17,8 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         
         tweets = []
-        stop_at = 1000
-        #comment
+        stop_at = 40000
+        
         for tweet in collection.find( { "is_labeled" : "1"}, {"label_result" : "true"}):
             tweets.append(json.dumps(tweet['geo']))
             
