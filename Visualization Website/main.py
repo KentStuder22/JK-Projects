@@ -16,9 +16,9 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         
         tweets = []
-        stop_at = 40_000
+        stop_at = 1000
 
-        for tweet in collection.find():
+        for tweet in collection.find( { "is_labeled" : { "$in": [1]}}, {"label_result" : "true"}):
             tweets.append(json.dumps(tweet))
             if len(tweets) == stop_at: break
 
