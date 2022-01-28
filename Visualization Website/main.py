@@ -25,7 +25,6 @@ class MainHandler(tornado.web.RequestHandler):
                 # "geo" : {'$ne' : "N/A"}   # un-comment to filter for geo data too
                 } ):
             temp = [tweet['geo'], tweet['created_at'], tweet['label_result']]
-            # tweets.append(json.dumps(tweet['created_at']))
             tweets.append(json.dumps(temp))
             
             if len(tweets) == stop_at: break
