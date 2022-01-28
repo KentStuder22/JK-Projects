@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from genericpath import exists
 import tornado
 import tornado.ioloop
@@ -20,7 +19,10 @@ class MainHandler(tornado.web.RequestHandler):
         tweets = []
         stop_at = 40000
         
-        for tweet in collection.find( { "is_labeled" : "1"}, {"label_result" : "true"}, {"geo" : {'$ne' : None, '$exists' : True}}):
+        for tweet in collection.find( {'$and' : [
+                { "is_labeled" : "1"}, 
+                {"label_result" : "true"}, 
+                {"geo" : {'$ne' : None, '$exists' : True}}]}):
             tweets.append(json.dumps(tweet['geo']))
             
             if len(tweets) == stop_at: break
