@@ -19,13 +19,11 @@ class MainHandler(tornado.web.RequestHandler):
         tweets = []
         stop_at = 10_000
         
-        for tweet in collection.find( {'$and' : 
-                [
-                    { "is_labeled" : 1 }, 
-                    {"label_result" : "true"}, 
-                    {"geo" : {'$ne' : "N/A"}}
-                ]
-            }):
+        for tweet in collection.find( { 
+                "is_labeled" : 1, 
+                # {"label_result" : "true"}, 
+                # "geo" : {'$ne' : "N/A"}
+                } ):
             temp = [tweet['geo'], tweet['created_at'], tweet['label_result']]
             tweets.append(json.dumps(temp))
             
