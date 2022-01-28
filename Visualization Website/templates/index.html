@@ -13,17 +13,17 @@
     <script src="{{ static_url('main.js') }}"></script>
     <label>Visualization Website</label>
 </head>
-<body>
+<body id="home" onload="loaded('{{ tweets }}')">
     <div id='stateInfo' display='none' style='position: absolute; display: none;'></div>
     <div class="main-container">
         <div class="navbar">
             <ul class="nav-list">
                 <li class="nav-items"><a href="#home" class="nav-links">- HOME</a></li>
-                <li class="nav-items"><a href="#trends" class="nav-links">- TRENDS</a></li>
+                <li class="nav-items"><a href="#trends" onclick="reload()" class="nav-links">- TRENDS</a></li>
             </ul>
             <hr class="header-line" style="height:2px; width:97.4%; border-width:0; color:rgb(255, 255, 255); background-color:rgb(255, 255, 255); margin-left: 22px">
         </div>
-        <div class="map-container" id="home">
+        <div class="map-container">
             <h1 class="map-header">COVID-19 IN THE UNITED STATES</h1>
             <svg class="container" xmlns="http://www.w3.org/2000/svg" width="959" height="593">
                 <g onmouseleave="clear_highlight()" id="state">
@@ -290,71 +290,9 @@
                 <h1 class="trend-header">NATIONAL POSITIVE COVID-19 CASES</h1>
                 <div class="trend-charts" id="line-chart-container">
                     <canvas id="trend-line"></canvas>
-                    <script>
-                        const x_labels = [
-                            'January',
-                            'February',
-                            'March',
-                            'April',
-                            'May',
-                            'June',
-                            'July',
-                            'August',
-                            'September',
-                            'October',
-                            'November',
-                            'December'
-                        ];
-                        const data = {
-                            labels: x_labels,
-                            datasets: [{
-                                label: 'COVID-19 Cases',
-                                backgroundColor: 'rgb(0,0,0)',
-                                borderColor: 'rgb(255,255,255)',
-                                data: [1000, 2000, 3000, 4000, 1500, 3000, 7000, 10000, 3000, 7500, 8000, 3500],
-                            }]
-                        };
-                        const config = {
-                            type: 'line',
-                            data: data,
-                            options: {}
-                        };
-                    </script>
-                    <script>
-                        const mainChart = new Chart(
-                            document.getElementById('trend-line'), config
-                        );
-                    </script>
                 </div>
                 <div class="trend-charts" id="pie-graph-container">
                     <canvas id="percent-total"></canvas>
-                    <script>
-                        const pie_data = {
-                            labels: [
-                                'Covid Positive',
-                                'Healthy'
-                            ],
-                            datasets: [{
-                                label: 'TOTAL US POPULATION',
-                                data: [10000000, 400000000],
-                                backgroundColor: [
-                                    'rgb(136,8,8)',
-                                    'rgb(0,0,0)'
-                                ],
-                                borderColor: 'rgb(255,255,255)',
-                                hoverOffset: 4
-                            }]
-                        };
-                        const pie_config = {
-                            type: 'doughnut',
-                            data: pie_data,
-                        };
-                    </script>
-                    <script>
-                        const pieChart = new Chart(
-                            document.getElementById('percent-total'), pie_config
-                        );
-                    </script>
                 </div>
             </div>
         </div>
