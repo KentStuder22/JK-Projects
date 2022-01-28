@@ -3,6 +3,7 @@
     padding: 0;  
 }
 .navbar {
+    position: fixed;
     background: black;
     padding: 20px;
     top: 0;
@@ -42,10 +43,10 @@ body {
     font-weight:200
 }
 .map-container {
+    margin-top: 6%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
     margin-bottom: auto;
 }
 .chart-container {
@@ -65,6 +66,7 @@ body {
 }
 .trend-charts {
     float: left;
+    margin-bottom: 4%;
 }
 svg path {
     fill: white;
